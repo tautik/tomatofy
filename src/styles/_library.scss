@@ -1,0 +1,103 @@
+.library {
+  // overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 25%;
+  padding-bottom: 0rem;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 30px rgb(182, 182, 182);
+  overflow: scroll;
+  .library-head {
+    padding: 2rem;
+  }
+  .library-songs {
+    margin-top: -0.6rem;
+  }
+  //making it hidden
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all 0.5s ease;
+}
+
+.library-song {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+
+  .song-description {
+    padding-left: 1rem;
+    h3 {
+      font-size: 1.1rem;
+    }
+    h4 {
+      font-size: 0.7rem;
+    }
+  }
+
+  img {
+    width: 35%;
+  }
+
+  &:hover {
+    background-color: rgb(222, 222, 255);
+  }
+}
+
+*::-webkit-scrollbar {
+  height: 0rem;
+  background-color: rgba(120, 126, 133, 0.5);
+  width: 0.3vw;
+}
+.library::-webkit-scrollbar-track {
+  background: #626155;
+  border-radius: 20px;
+}
+.library::-webkit-scrollbar-thumb {
+  background: rgb(78, 49, 78);
+  height: 10px;
+}
+
+.active-library {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .library {
+    width: 30%;
+  }
+  .library-song {
+    padding: 1rem 1.2rem;
+
+    img {
+      width: 80px;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .library {
+    width: 40%;
+  }
+  .library-song {
+    padding: 1rem 1rem;
+
+    img {
+      width: 60px;
+    }
+  }
+}
+@media screen and (max-width: 443px) {
+  .library {
+    width: 50%;
+  }
+  .library-song {
+    padding: 1rem 1rem;
+
+    img {
+      width: 50px;
+    }
+  }
+}
